@@ -16,7 +16,7 @@ BREAD is a modular embedded systems architecture built around a central **Loaf**
 ┌────────────────────────────────────────┐
 │              Loaf (Main Board)         │
 │   Central controller with female conn. │
-│   handles aggregation, display, logic  │
+│   handles aggregation, data, and logic │
 └────────┬────────┬────────┬─────────────┘
          │        │        │
     ┌────┴──┐ ┌───┴──┐ ┌───┴──┐
@@ -44,7 +44,7 @@ BREAD is a modular embedded systems architecture built around a central **Loaf**
 
 | Component | Role |
 |-----------|------|
-| LOAF | Sensor slice microcontroller |
+| LOAF | facilitates slice data |
 | Sense Slice | temp / humidity / pressure sensor / boot sensor |
 | Actuation Slice | salt distribution motor control |
 | Optics Slice | camera processing and control |
@@ -68,7 +68,7 @@ Slices send formatted UART packets to the loaf via DMA when requested by the mas
 2. Open in **STM32CubeIDE**
 3. Flash the slice firmware to your Nucleo F303K8
 4. Connect the slice to the loaf board via the edge connector
-5. Monitor output over UART at `115200` baud
+5. Monitor output over UART at `9600` baud and debug over USB at `115200` baud
 
 ---
 
